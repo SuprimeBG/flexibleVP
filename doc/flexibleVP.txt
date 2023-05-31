@@ -1,0 +1,141 @@
+FlexibleVP Plugin Documentation
+==============================
+
+Table of Contents
+-----------------
+1. Introduction
+2. Installation
+3. Usage
+4. Configuration
+5. Commands
+6. File Formats
+7. Contributing
+8. License
+
+1. Introduction
+----------------
+
+The FlexibleVP plugin is designed to enhance your Vim experience by providing a convenient way to launch applications and open web pages directly from the editor. It allows you to store and manage the addresses of your frequently used apps and web pages, providing quick access to them without leaving Vim.
+
+This documentation will guide you through the installation process, usage instructions, available commands, file formats, contributing guidelines, and licensing information.
+
+2. Installation
+----------------
+
+To install the FlexibleVP plugin, you can use a plugin manager such as Vim-Plug, Vundle, or Pathogen. Follow the instructions provided by your chosen plugin manager to add the plugin to your Vim setup.
+
+Example installation using Vim-Plug:
+
+1. Add the following line to your Vim configuration file (e.g., `~/.vimrc` or `init.vim`):
+
+    
+    Plug 'username/flexibleVP'
+    
+
+2. Reload your Vim configuration.
+
+3. Run the `:PlugInstall` command to install the plugin.
+
+4. Verify that the plugin has been successfully installed by opening Vim and checking for any error messages.
+
+3. Usage
+---------
+
+The FlexibleVP plugin provides several commands that allow you to launch applications and open web pages. To use the plugin, follow these instructions:
+
+1. Launching an application:
+
+   Use the `:Launch` command followed by the name of the application. For example:
+
+	:Launch example
+
+This will search for the specified name in the app address file and open the corresponding application.
+
+2. Opening a web page:
+
+Use the `:Launch` command followed by the name of the web page. For example:
+
+	:Launch example_website
+
+This will search for the specified name in the web page address file and open the corresponding web page.
+
+3. Adding new app addresses:
+
+Use the `:Adda` command followed by the name and address of the application. For example:
+
+	:Adda app_name /path/to/application
+
+
+This will add a new entry in the app address file with the specified name and address.
+
+4. Adding new web page addresses:
+
+Use the `:Addw` command followed by the name and address of the web page. For example:
+
+	:Addw web_name www.example.com
+
+This will add a new entry in the web page address file with the specified name and address.
+
+4. Configuration
+----------------
+
+The FlexibleVP plugin does not require any specific configuration. However, you can customize its behavior by modifying the plugin's settings.
+
+To configure the plugin, you can set the following options in your Vim configuration file:
+
+- `g:flexibleVP_option1`: Description of option 1.
+- `g:flexibleVP_option2`: Description of option 2.
+- ...
+
+Refer to the plugin's source code or documentation for a complete list of available configuration options and their descriptions.
+
+5. Commands
+-----------
+
+The FlexibleVP plugin provides the following commands:
+
+- `:Launch <name>`: Launches the specified application or opens the corresponding web page.
+- `:Adda <name> <address>`: Adds a new application address to the app address file.
+- `:Addw <name> <address>`: Adds a new web page address to the web page address file.
+
+Refer to the "Usage" section above for detailed instructions on using these commands.
+
+6. File Formats
+----------------
+
+The FlexibleVP plugin uses two text files to store the app and web page addresses: `appaddress.txt` and `webaddress.txt`. These files are located in the `data` directory of the plugin.
+
+The file formats are as follows:
+
+- `appaddress.txt`:
+Each line represents an application address and follows the format:
+
+<name>: <address>
+
+
+- `webaddress.txt`:
+Each line represents a web page address and follows the format:
+
+<name>: <address>
+
+
+You can manually edit these files to add, remove, or modify the addresses as needed.
+
+7. Contributing
+---------------
+
+Contributions to the FlexibleVP plugin are welcome! If you have any bug fixes, improvements, or new features to propose, please follow these steps:
+
+1. Fork the repository on GitHub.
+2. Create a new branch for your changes.
+3. Make the necessary modifications.
+4. Write tests to ensure the correctness of your changes (if applicable).
+5. Submit a pull request describing your changes.
+
+Please adhere to the coding style and guidelines specified in the plugin's source code and documentation.
+
+8. License
+----------
+
+The FlexibleVP plugin is released under the MIT License. See the [LICENSE](./LICENSE) file for more information.
+
