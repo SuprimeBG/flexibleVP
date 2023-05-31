@@ -4,15 +4,14 @@ endif
 let g:loaded_flexibleVP = 1
 
 command! -nargs=1 Launch call flexibleVP#Launch(<q-args>)
+command! -nargs=+ Addw call flexibleVP#Addw(<q-args>)
+command! -nargs=+ Adda call flexibleVP#Adda(<q-args>)
 
 function! flexibleVP#Launch(app)
   let web_addresses_file = expand('~/vimfiles/plugged/flexibleVP/data/webaddress.txt')
   let app_addresses_file = expand('~/vimfiles/plugged/flexibleVP/data/appaddress.txt')
 
-  " Read web addresses from file
   let web_addresses = readfile(web_addresses_file)
-
-  " Read application addresses from file
   let app_addresses = readfile(app_addresses_file)
 
   let address = ''
@@ -27,7 +26,6 @@ function! flexibleVP#Launch(app)
     endif
   endfor
 
-  " If the app is not a web address, check application addresses
   if empty(address)
     for line in app_addresses
       if line =~ '^' . a:app . ':'
@@ -63,20 +61,8 @@ function! flexibleVP#Launch(app)
   endif
 endfunction
 
-
 function! flexibleVP#Addw(name, address)
-  let filepath = expand('~/vimfiles/plugged/flexibleVP/data/webaddress.txt')
-  let entry = a:name . ': ' . a:address
-  call writefile([entry], filepath, 'a')
-  echo 'Added ' . entry . ' to ' . filepath
 endfunction
 
 function! flexibleVP#Adda(name, address)
-  let filepath = expand('~/vimfiles/plugged/flexibleVP/data/appaddress.txt')
-  let entry = a:name . ': ' . a:address
-  call writefile([entry], filepath, 'a')
-  echo 'Added ' . entry . ' to ' . filepath
 endfunction
-
-command! -nargs=+ Addw call flexibleVP#Addw(<q-args>)
-command! -nargs=+ Adda call flexibleVP#Adda(<q-args>)
