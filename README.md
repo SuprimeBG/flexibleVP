@@ -30,3 +30,5 @@ For example:
 ## Common errors
 
 If you encounter any error with launching something check the .txt files as they should be ``` name: address ``` and the web addresses must be whole like this: http://www.example.com, as the plugin uses the explorer function for windows to open web pages. If the address is not in this format it wil open Documentation folder.
+
+When opening web addresses sometimes the browser may be low resolution.
