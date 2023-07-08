@@ -1,7 +1,7 @@
 ## Features
 
 - Launch applications and web pages directly from Vim.
-- Store and manage the addresses of your apps and web pages in separate files.
+- Store and manage the addresses of your apps and web pages from Vim.
 - Cross-platform support for Windows, macOS, and Linux.
 
 ## Installation
@@ -24,11 +24,10 @@ This will search for the specified name in the app and web page address files an
 You can add new app or web page addresses using the `:Addw` and `:Adda` commands or just go to webaddress.txt or appaddress.txt. 
 For example:
 ```vim
-:Addw example_name www.example.com
+:Addw example www.example.com
 :Adda brave C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
 ```
 ## Common errors
+Plugin may have problems with plugin managers
 
-If you encounter any error with launching something check the .txt files as they should be ``` name: address ``` and the web addresses must be whole like this: http://www.example.com, as the plugin uses the explorer function for windows to open web pages. If the address is not in this format it wil open Documentation folder.
-
-When opening web addresses sometimes the browser may be low resolution.
+When opening something it may be low resolution.
