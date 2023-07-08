@@ -27,7 +27,21 @@ For example:
 :Addw example www.example.com
 :Adda brave C:\Program Files\BraveSoftware\Brave-Browser\Application\brave.exe
 ```
+
+Check existing addresses or add new ones from witing Vim. For example:
+To list web addresses:
+```vim
+:Listw
+```
+
+To list app addresses:
+```vim
+:Lista
+```
+
 ## Common errors
 Plugin may have problems with plugin managers
 
 When opening something it may be low resolution.
+
+Please note that when adding web address at leas end it with .com/.org/.net ... so command knows to look in the internet
