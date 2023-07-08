@@ -8,6 +8,9 @@ if exists('g:loaded_flexibleVP')
 endif
 let g:loaded_flexibleVP = 1
 
+
 command! -nargs=1 Launch call Launch(<q-args>)
-command! -nargs=+ Addw call Addw(<f-args>)
-command! -nargs=+ Adda call Adda(<f-args>)
+command! -nargs=+ Addw call Addwebaddress(<f-args>)
+command! -nargs=+ Adda call Addapp(<f-args>)
+command! -nargs=0 Listw call ListWebAddresses()
+command! -nargs=0 Lista call ListAppAddresses()
