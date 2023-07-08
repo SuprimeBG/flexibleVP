@@ -13,7 +13,6 @@ function! Launch(app)
   let address = ''
   let is_web_address = 0
 
-  " Check if the given app is a web address
   for line in web_addresses
     if line =~ '^' . a:app . ':'
       let address = substitute(line, '^' . a:app . ':\s*', '', '')
