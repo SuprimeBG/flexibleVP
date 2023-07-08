@@ -1,6 +1,6 @@
 command! -nargs=1 Launch call Launch(<q-args>)
-command! -nargs=+ Addw call Addw(<q-args>)
-command! -nargs=+ Adda call Adda(<q-args>)
+command! -nargs=+ Addw call Addw(<f-args>)
+command! -nargs=+ Adda call Adda(<f-args>)
 
 function! Launch(app)
 
