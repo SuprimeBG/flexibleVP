@@ -54,6 +54,11 @@ The FlexibleVP plugin provides several commands that allow you to launch applica
 
 	:Addw web_name www.example.com
 
+5. Check existing addresses or add new ones:
+
+	:Listw - for webaddresses
+	:Lista - for appaddresses
+
 4. Contributing
 ---------------
 
@@ -69,3 +74,4 @@ Contributions to the FlexibleVP plugin are welcome!
 ----------
 
 The FlexibleVP plugin is released under the MIT License. See the [LICENSE](./LICENSE) file for more information.
+
